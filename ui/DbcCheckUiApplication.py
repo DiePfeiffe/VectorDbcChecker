@@ -7,18 +7,16 @@ from tkinter import *
 from tkinter import scrolledtext, messagebox
 from typing import cast
 
-from pywin.mfc.object import Object
-
 from common import DbcCheckConfig
 from common.DbcCheckUtils import *
 from ui import DbcCheckUiSettings
 
-class DbcCheckUiApplication( Object ):
+class DbcCheckUiApplication( object ):
     def __del__( self ):
         pass
 
     def __init__( self, aOnStartCheckCallback ):
-        Object.__init__( self )
+        object.__init__( self )
         self.resultFolder = None
         self.title = None
         self.output = None
